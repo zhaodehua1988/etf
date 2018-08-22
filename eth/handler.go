@@ -52,7 +52,7 @@ const (
 )
 
 var (
-	daoChallengeTimeout = 15 * time.Second // Time allowance for a node to reply to the DAO handshake challenge
+	daoChallengeTimeout       = 15 * time.Second // Time allowance for a node to reply to the DAO handshake challenge
 )
 
 // errIncompatibleConfig is returned if the requested protocols and configs are
@@ -305,7 +305,6 @@ func (pm *ProtocolManager) handle(p *peer) error {
 			}
 		}()
 	}
-
 	// main loop. handle incoming messages.
 	for {
 		if err := pm.handleMsg(p); err != nil {
@@ -439,6 +438,8 @@ func (pm *ProtocolManager) handleMsg(p *peer) error {
 				p.forkDrop = nil
 				return nil
 			}
+			// Possibly an empty reply to the fork header checks, sanity check TDs
+
 		}
 		// Filter out any explicitly requested headers, deliver the rest to the downloader
 		filter := len(headers) == 1

@@ -11,7 +11,7 @@
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 // GNU Lesser General Public License for more details.
 //
-// You should have received a copy of the GNU Lesser General Public License
+// You should have received a copy of the GNU Lesser GeneHeaderByNumberral Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
 // Package ethclient provides a client for the Ethereum RPC API.
