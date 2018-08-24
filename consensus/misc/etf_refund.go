@@ -116,7 +116,7 @@ func ApplyEtfRefundHardFork(statedb *state.StateDB ,db ethdb.Database,config *pa
 }
 
 func SetEtfRefundHardForkChainId(db ethdb.Database,config *params.ChainConfig) error {
-	log.Info("set etf refund hardfork chainId")
+	log.Info("set etf refund hardfork ","chainID",params.EtfRefundContractForkChainId)
 	stored := rawdb.ReadCanonicalHash(db, 0)
 	storedcfg := rawdb.ReadChainConfig(db, stored)
 	if storedcfg == nil{

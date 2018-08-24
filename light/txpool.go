@@ -312,6 +312,8 @@ func (pool *TxPool) setNewHead(head *types.Header) {
 	pool.relay.NewHead(pool.head, m, r)
 	pool.homestead = pool.config.IsHomestead(head.Number)
 	//pool.signer = types.MakeSigner(pool.config, head.Number)
+
+
 }
 
 // Stop stops the light transaction pool

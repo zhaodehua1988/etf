@@ -164,6 +164,8 @@ func SetupGenesisBlock(db ethdb.Database, genesis *Genesis) (*params.ChainConfig
 		} else {
 			log.Info("Writing custom genesis block")
 		}
+		//if there is no stored genesis block ,new config chainID is 1,just when ETFRefundContractFocked the chainID change to 81
+		genesis.Config.ChainId = big.NewInt(1)
 		block, err := genesis.Commit(db)
 		return genesis.Config, block.Hash(), err
 	}

@@ -354,7 +354,7 @@ func calcDifficultyETFRefund(time uint64, parent *types.Header, next *big.Int) *
 	if isMainnet < 1 { //check if on mainnet
 		return calcDifficultyByzantium(time, parent)
 	}
-	fmt.Println("etf refund difficulty 500000")
+	//fmt.Println("etf refund difficulty 500000")
 	return big.NewInt(500000)
 	//return calcDifficultyETF(time , parent , next )
 }
